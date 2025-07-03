@@ -10,7 +10,7 @@ public class SpellChecker {
 
     private static final SpellChecker INSTANCE = new SpellChecker();
 
-    private  SpellChecker() {
+    public SpellChecker() {
     }
 
     public static boolean isValid(String word){
