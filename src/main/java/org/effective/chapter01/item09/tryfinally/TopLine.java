@@ -1,4 +1,4 @@
-package org.effective.chapter01.item9.suppress;
+package org.effective.chapter01.item09.tryfinally;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,12 +6,17 @@ import java.io.IOException;
 
 public class TopLine {
     static String firstLineOfFile(String path) throws IOException {
-        try(BufferedReader br = new BadBufferedReader(new FileReader(path))) {
+        BufferedReader br = new BufferedReader(new FileReader(path));
+        try {
             return br.readLine();
+        } finally {
+            // 자원 반납
+            br.close();
         }
     }
 
     public static void main(String[] args) throws IOException {
-        System.out.println(firstLineOfFile("pom.xml"));
+        String path = args[0];
+        System.out.println(firstLineOfFile(path));
     }
 }

@@ -1,4 +1,4 @@
-package org.effective.chapter01.item9.puzzler;
+package org.effective.chapter01.item09.puzzler;
 
 import java.io.*;
 

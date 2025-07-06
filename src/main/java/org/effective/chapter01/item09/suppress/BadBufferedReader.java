@@ -1,4 +1,4 @@
-package org.effective.chapter01.item9.suppress;
+package org.effective.chapter01.item09.suppress;
 
 import java.io.*;
 
