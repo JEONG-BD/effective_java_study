@@ -22,11 +22,6 @@ public class Settings {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Settings());
-        System.out.println(new Settings());
-        System.out.println(new Settings());
-        System.out.println(new Settings());
-
 
     }
 }

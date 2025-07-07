@@ -35,8 +35,6 @@ public class Order {
         order.urgent = true;
         order.product = product;
         return  order;
-
-
     }
 
     public static void main(String[] args) {

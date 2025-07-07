@@ -19,9 +19,9 @@ public class HelloServiceFactory {
         HelloService chineseHelloService = new ChineseHelloService();
         System.out.println(chineseHelloService.hello());
 
-        Class<?> aClass = Class.forName("me.whiteship.hello.ChineseHelloService");
-        Constructor<?> constructor = aClass.getConstructor();
-        HelloService helloService = (HelloService) constructor.newInstance();
+        //Class<?> aClass = Class.forName("me.whiteship.hello.ChineseHelloService");
+        //Constructor<?> constructor = aClass.getConstructor();
+        //HelloService helloService = (HelloService) constructor.newInstance();
 
     }
 
