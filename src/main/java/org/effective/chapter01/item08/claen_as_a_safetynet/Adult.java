@@ -5,6 +5,10 @@ public class Adult {
         //try (Room myRoom = new Room(7)) {
         //    System.out.println("안녕~");
         //}
+
+
+
+
         new Room(99);
         System.out.println("아무렴");
     }
