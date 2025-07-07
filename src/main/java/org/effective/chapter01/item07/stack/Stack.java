@@ -18,23 +18,23 @@ public class Stack {
         elements[size++] = e;
     }
 
-    public Object pop(){
-
-        if(size ==0){
-            throw new EmptyStackException();
-        }
-        return elements[--size];
-    }
-    //
     //public Object pop(){
     //
     //    if(size ==0){
     //        throw new EmptyStackException();
     //    }
-    //    Object element = elements[--size];
-    //    elements[size] = null; 
-    //    return element;
+    //    return elements[--size];
     //}
+
+    public Object pop(){
+
+        if(size ==0){
+            throw new EmptyStackException();
+        }
+        Object element = elements[--size];
+        elements[size] = null;
+        return element;
+    }
     private void ensureCapacity(){
         if (elements.length == size) {
             elements = Arrays.copyOf(elements, 2 * size + 1);
