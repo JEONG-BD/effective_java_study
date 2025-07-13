@@ -1,5 +1,6 @@
 package org.effective.chapter02.item14;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class PhoneNumber implements Cloneable, Comparable<PhoneNumber>{
@@ -56,6 +57,14 @@ public class PhoneNumber implements Cloneable, Comparable<PhoneNumber>{
         return result;
     }
 
+    private static final Comparator<PhoneNumber> COMPARATOR =
+            Comparator.comparingInt((PhoneNumber pn) -> pn.areaCode)
+                    .thenComparingInt(pn -> pn.prefix)
+                    .thenComparingInt(pn -> pn.lineNum);
+
+    public int compate(PhoneNumber pn){
+        return COMPARATOR.compare(this, pn);
+    }
     //@Override
     //public int compareTo(PhoneNumber o) {
     //    return 0;
